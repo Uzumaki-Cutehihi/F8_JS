@@ -65,8 +65,11 @@ function computePrice(salePrice, discountRate) {
 }
 console.log(computePrice(150, "heh"));
 
-// hw8 - Gán giá trị số cho 2 biên
+// hw8 - Gán giá trị số cho 2 biên -> hoán đổi k dùng biến trung gian
 let x, y;
 x = 10;
 y = 12;
+x = x + y;
+y = x - y;
+x = x - y;
 console.log(x, y);
