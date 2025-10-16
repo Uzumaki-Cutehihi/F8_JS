@@ -54,3 +54,5 @@ function findHighestAvgRating(obj) {
 }
 
 console.log(findHighestAvgRating(products));
+
+// Ý cuối khá giống cách làm 1 nên thoii

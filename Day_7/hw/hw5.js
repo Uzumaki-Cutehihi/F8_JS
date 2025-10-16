@@ -48,10 +48,14 @@ watchHistory.map((x) => {
 });
 
 //Khởi tạo danh sách
-const r3 = [];
-for (let x of userIdList) {
-  r3.push({ id: x, videoList: [] });
-}
-watchHistory.forEach(e => {
-    
-});
+const r3 = watchHistory.reduce((acc, x) => {
+  if (!acc[x.userId]) {
+    acc[x.userId] = {
+      duration: 0,
+    };
+  }
+  acc[x.userId].duration += x.duration;
+  return acc;
+}, {});
+
+console.log(r3);
