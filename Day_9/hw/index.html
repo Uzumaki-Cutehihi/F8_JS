@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex items-center justify-center min-h-screen bg-purple-600">
+
+    <div class="bg-white rounded-lg shadow-xl w-full max-w-md p-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">
+            Create a new account
+        </h2>
+
+        <form class="space-y-4">
+            <div>
+                <label for="username" class="block text-sm font-medium text-gray-700 mb-1">Username</label>
+                <div class="relative">
+                    <input type="text" id="username"
+                        class="w-full border border-gray-300 rounded-md p-2 pr-10 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-colors"
+                        placeholder="Enter username" />
+                    <div id="username-icon" class="absolute inset-y-0 right-3 flex items-center hidden">
+                        <!-- icon 1 -->
+                        <svg id="username-success" class="w-5 h-5 text-green-500 hidden" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <!-- icon 2 -->
+                        <svg id="username-error" class="w-5 h-5 text-red-500 hidden" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div id="username-error-msg" class="text-red-500 text-sm mt-1 hidden">Username cannot be blank</div>
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <div class="relative">
+                    <input type="email" id="email"
+                        class="w-full border border-gray-300 rounded-md p-2 pr-10 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-colors"
+                        placeholder="daubuoi.com" />
+                    <div id="email-icon" class="absolute inset-y-0 right-3 flex items-center hidden">
+                        <!-- icon 1 -->
+                        <svg id="email-success" class="w-5 h-5 text-green-500 hidden" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <!-- icon 2 -->
+                        <svg id="email-error" class="w-5 h-5 text-red-500 hidden" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div id="email-error-msg" class="text-red-500 text-sm mt-1 hidden">Please enter a valid email address
+                </div>
+            </div>
+
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                <div class="relative">
+                    <input type="password" id="password"
+                        class="w-full border border-gray-300 rounded-md p-2 pr-10 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-colors"
+                        placeholder="Enter password" />
+                    <div id="password-icon" class="absolute inset-y-0 right-3 flex items-center hidden">
+                        <!-- icon 1 -->
+                        <svg id="password-success" class="w-5 h-5 text-green-500 hidden" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+
+                        <svg id="password-error" class="w-5 h-5 text-red-500 hidden" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div id="password-error-msg" class="text-red-500 text-sm mt-1 hidden">Thiếu kí tự</div>
+            </div>
+
+            <div>
+                <label for="password_confirm" class="block text-sm font-medium text-gray-700 mb-1">Password
+                    Confirmation</label>
+                <div class="relative">
+                    <input type="password" id="password_confirm"
+                        class="w-full border border-gray-300 rounded-md p-2 pr-10 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-colors"
+                        placeholder="Re-enter password" />
+                    <div id="password_confirm-icon" class="absolute inset-y-0 right-3 flex items-center hidden">
+
+                        <svg id="password_confirm-success" class="w-5 h-5 text-green-500 hidden" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+
+                        <svg id="password_confirm-error" class="w-5 h-5 text-red-500 hidden" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div id="password_confirm-error-msg" class="text-red-500 text-sm mt-1 hidden">Đéo trùng
+                </div>
+            </div>
+
+            <button type="submit" id="submit_btn"
+                class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-md shadow mt-4 transition">
+                Create account
+            </button>
+        </form>
+
+        <script src="handle.js"></script>
+    </div>
+
+</body>
+
+</html>
