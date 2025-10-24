@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        body{
+            @apply h-screen;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main class="flex h-full">
+        <div id="left" class="w-[220px] bg-gray-300 h-full relative group">
+            left
+            <div id="flag"
+                class="w-[5px] absolute top-0 right-0 bottom-0 bg-[gray] z-50 cursor-ew-resize opacity-0 group-hover:opacity-100 transition-all">
+
+            </div>
+        </div>
+        <div id="right" class="flex-1">
+            right
+        </div>
+    </main>
+    <script src="./ex04.js"></script>
+</body>
+
+</html>

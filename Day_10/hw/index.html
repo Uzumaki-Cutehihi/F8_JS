@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex items-center justify-center h-screen bg-purple-600 w-full">
+    <main class="bg-gray-800 text-white p-20 rounded-lg shadow-lg ">
+        <h1 class="text-center text-3xl mb-6">Get Things Done !</h1>
+        <form id="todoInput" class="flex mb-4">
+            <input id="inputTodo"
+                class="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-l-md text-gray-200 focus:outline-none focus:border-purple-400"
+                type="text" placeholder="What is the task today">
+            <button id="submit" class="bg-purple-600 text-white px-4 py-2 rounded">Add Task</button>
+        </form>
+        <form id="todoList">
+            <ul>
+
+            </ul>
+        </form>
+    </main>
+    <script src="./handle.js"></script>
+</body>
+
+</html>
