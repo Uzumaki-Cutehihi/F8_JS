@@ -5,6 +5,7 @@ const products = [
   { id: 4, name: "Product 4", price: 4000 },
 ];
 
+// Lấy giỏ hàng từ local storage --> Nếu rỗng thì cho mảng rỗng
 let totalCart = JSON.parse(localStorage.getItem("cart")) || [];
 function saveCart() {
   localStorage.setItem("cart", JSON.stringify(totalCart));
