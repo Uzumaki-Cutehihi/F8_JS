@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .up {
+            color: green;
+        }
+
+        .down {
+            color: red;
+        }
+
+        .up,
+        .down {
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
+        .selected {
+            border: 1px dashed green;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border: 1px solid red;
+        }
+
+        ul li {
+            margin: 10px 0;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+
+        #customMenu {
+            position: fixed;
+            display: none;
+            background-color: antiquewhite;
+            color: black;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            min-width: 100px;
+            z-index: 1000;
+            overflow: hidden;
+            border: 1px solid palevioletred;
+        }
+
+        #customMenu li {
+            display: flex;
+            position: relative;
+            left: -15px;
+            align-items: center;
+            justify-content: center;
+            padding: 0px;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-align: center;
+            user-select: none;
+        }
+
+        #customMenu li:hover {
+            color: blue;
+        }
+
+        #renameModal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        #renameModal input {
+            padding: 6px;
+        }
+
+        #renameModal button {
+            margin-left: 5px;
+            padding: 6px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="renameModal">
+        <input type="text" id="renameInput" />
+        <button id="saveRename">Lưu</button>
+    </div>
+
+    <div id="customMenu">
+        <ul>
+            <li id="rename">Đổi tên</li>
+            <li id="delete">Xoá</li>
+        </ul>
+    </div>
+
+    <ul id="main">
+        <li>Item 1 <span class="up">Up</span> <span class="down">Down</span></li>
+        <li>Item 2 <span class="up">Up</span> <span class="down">Down</span></li>
+        <li>Item 3 <span class="up">Up</span> <span class="down">Down</span></li>
+        <li>Item 4 <span class="up">Up</span> <span class="down">Down</span></li>
+        <li>Item 5 <span class="up">Up</span> <span class="down">Down</span></li>
+    </ul>
+    <script src="./handle.js"></script>
+</body>
+
+</html>
