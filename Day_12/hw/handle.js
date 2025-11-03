@@ -4,6 +4,8 @@ const delBtn = document.querySelector("#delete");
 const renameBtn = document.querySelector("#rename");
 // Lấy nút modal
 const saveRenameBtn = document.querySelector("#saveRename");
+const modal = document.querySelector("#renameModal");
+const modalInput = document.querySelector("#renameInput");
 
 // Bắt sự kiện
 ul.addEventListener("click", (e) => {
@@ -90,9 +92,10 @@ document.addEventListener("contextmenu", (e) => {
 
     renameBtn.onclick = () => {
       customMenu.style.display = "none";
-      renameModal.style.display = "flex";
+      modal.style.display = "flex";
       renameInput.value = liItem.childNodes[0].textContent.trim();
       renameInput.focus();
+      closeModal();
 
       saveRenameBtn.onclick = () => {
         liItem.childNodes[0].textContent = renameInput.value.trim() + " ";
@@ -122,3 +125,22 @@ const closeCustomMenu = () => {
 };
 
 closeCustomMenu();
+
+// Ẩn modal
+const closeModal = () => {
+  document.onkeyup = (e) => {
+    if (e.key === "Escape") {
+      modal.style.display = "none";
+    }
+  };
+
+  // document.addEventListener("click", (e) => {
+  //   if (
+  //     modal.style.display === "flex" &&
+  //     !renameBtn.contains(e.target) &&
+  //     !modalInput.contains(e.target)
+  //   ) {
+  //     modal.style.display = "none";
+  //   }
+  // });
+};
